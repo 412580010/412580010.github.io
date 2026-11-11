@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>我的個人網站</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>歡迎來到我的個人網站</h1>
+
+    <h2>關於我</h2>
+    <p>大家好！我是 Chloe。</p>
+    <p>這是我第一次使用 GitHub Pages 建立網頁。</p>
+
+    <button id="showBtn">顯示更多介紹</button>
+
+<p id="moreInfo" style="display:none;">
+    我正在學習 HTML5、CSS 和 jQuery，
+    希望能製作更多具有互動功能的網頁！
+</p>
+
+    <h2>我的學習成果</h2>
+    <ul>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JSON</li>
+        <li>AJAX</li>
+        <li>jQuery</li>
+    </ul>
+
+<button id="loadBtn">載入學習紀錄</button>
+<ul id="skillList"></ul>
+<p id="loadMessage"></p>
+
+    <h2>我的 GitHub</h2>
+    <a href="https://github.com/412580010">
+        點擊查看我的 GitHub
+    </a>
+<script>
+    $(document).ready(function() {
+        $("#showBtn").click(function() {
+            $("#moreInfo").slideToggle();
+        });
+
+	$("#loadBtn").click(function() {
+    $("#loadMessage").text("正在載入資料...");
+
+    $.ajax({
+        url: "skills.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#skillList").empty();
+
+            $.each(data, function(index, skill) {
+                $("<li>")
+                    .text(skill.name + "：" + skill.description)
+                    .appendTo("#skillList");
+            });
+
+            $("#loadMessage").text("資料載入成功！");
+        },
+        error: function() {
+            $("#loadMessage").text("資料載入失敗！");
+        }
+    });
+});
+    });
+</script>
+</body>
+</html>

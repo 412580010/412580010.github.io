@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Git",
+    "description": "版本控制工具"
+  },
+  {
+    "name": "HTML5",
+    "description": "建立網頁結構"
+  },
+  {
+    "name": "CSS",
+    "description": "設計網頁外觀"
+  },
+  {
+    "name": "JSON",
+    "description": "儲存與交換資料"
+  },
+  {
+    "name": "AJAX",
+    "description": "非同步讀取資料"
+  },
+  {
+    "name": "jQuery",
+    "description": "實現網頁互動效果"
+  }
+]

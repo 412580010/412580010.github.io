@@ -1,0 +1,61 @@
+
+body {
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    background-color: #4169e1;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #4169e1;
+    border-bottom: 2px solid #4169e1;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+ul {
+    background-color: white;
+    padding: 25px 25px 25px 45px;
+    border-radius: 10px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #4169e1;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+button {
+    background-color: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2749b5;
+}
